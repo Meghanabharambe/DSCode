@@ -1,0 +1,12 @@
+package binaryTree;
+
+public class NodeQueue {
+	BinaryST data;
+	NodeQueue next;
+   public NodeQueue(BinaryST data) {
+   this.data=data;
+   next=null;
+   }
+	
+
+}

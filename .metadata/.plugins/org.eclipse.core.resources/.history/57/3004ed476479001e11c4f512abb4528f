@@ -1,0 +1,10 @@
+package binaryTree;
+
+import binarySearchTree.NodeQueue;
+
+public class QueueTree {
+	Ne rear, front;
+	NodeQueue data;
+	
+	
+}

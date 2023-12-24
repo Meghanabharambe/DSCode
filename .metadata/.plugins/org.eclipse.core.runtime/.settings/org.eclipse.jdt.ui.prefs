@@ -1,0 +1,13 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.util.Iterator"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="queueProg.QueueInt"><rhs name\="queueProg.QueueInt"/></lhs><lhs name\="simpleLinkedList.LinkedListStr"><rhs name\="simpleLinkedList.LinkedListStr"/></lhs><lhs name\="linkedListOpera.LinkedList"><rhs name\="linkedListOpera.LinkedList"/></lhs><lhs name\="linkedListOpera.sortSplitMerge"><rhs name\="linkedListOpera.sortSplitMerge"/></lhs><lhs name\="linkedListUserDefinedType.LinkedListEmp"><rhs name\="linkedListUserDefinedType.LinkedListEmp"/></lhs><lhs name\="doublyLinkedList.DoublyLL"><rhs name\="doublyLinkedList.DoublyLL"/></lhs><lhs name\="priorityQue.Element"><rhs name\="priorityQue.Element"/></lhs><lhs name\="priorityQue.PriorityQue"><rhs name\="priorityQue.PriorityQue"/></lhs><lhs name\="linkedListUserDefinedType.BookList"><rhs name\="linkedListUserDefinedType.BookList"/></lhs><lhs name\="binaryTree.BinaryTree"><rhs name\="binaryTree.BinaryTree"/></lhs><lhs name\="binarySearchTree.QueueTree"><rhs name\="binarySearchTree.QueueTree"/></lhs><lhs name\="graphProg.DireGraphAM"><rhs name\="graphProg.DireGraphAM"/></lhs><lhs name\="graphProg.GraphDFS"><rhs name\="graphProg.GraphDFS"/></lhs><lhs name\="linkedList.LinkedList"><rhs name\="linkedList.LinkedList"/></lhs><lhs name\="EvenOddTrimList.LinkedList"><rhs name\="EvenOddTrimList.LinkedList"/></lhs><lhs name\="postfixOpe.PostfixOpe"><rhs name\="postfixOpe.PostfixOpe"/></lhs></history>
+content_assist_number_of_computers=20
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=23
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

@@ -1,0 +1,197 @@
+package binarySearchTree;
+
+public class BinaryST {
+	static Node root;
+
+	public BinaryST() {
+		super();
+		this.root = null;
+	}
+	
+	public void addNode(int data) {
+		Node n1 = new Node(data);
+		
+		if(root == null)
+			root = n1;
+		else {
+			Node move = root;
+			while(true) {
+				
+				if(move.data < n1.data) {
+					if(move.right == null) {
+						move.right = n1;
+						System.out.println("Data added at right of "+move.data+" is "+n1.data);
+						break;
+					}
+					else move = move.right;
+				}
+			
+				if(move.data > n1.data) {
+					if(move.left == null) {
+						move.left = n1;
+						System.out.println("Data added at left of "+move.data+" is "+n1.data);
+						break;
+					}
+					else move = move.left;
+				}
+		  }
+		}
+	}
+	
+	public void display() {		
+		System.out.println("Inorder of tree: ");
+		inorder(root);
+		
+		System.out.println("Preorder of tree: ");
+		preorder(root);
+		
+		System.out.println("Postorder of tree: ");
+		postorder(root);
+	}
+	
+	public void inorder(Node move) {
+		if(move != null) {
+			inorder(move.left);
+			System.out.print(move.data+", ");
+			inorder(move.right);
+		}
+	}
+	
+	public void preorder(Node move) {
+		if(move != null) {
+			System.out.print(move.data+", ");
+			preorder(move.left);
+			preorder(move.right);
+		}
+	}
+	
+	public void postorder(Node move) {
+		if(move != null) {
+			postorder(move.left);
+			postorder(move.right);
+			System.out.print(move.data+", ");
+		}
+	}
+	
+	//delete node
+	public void deleteNode(int data) {
+		Node temp = root;
+		Node tag = root;
+		
+		while(temp != null && temp.data != data) {   //search the node which we want to delete
+			tag = temp;                             //assign tag to the parent of node and temp is deleting node
+			if(data > temp.data)
+				temp = temp.right;
+			else temp = temp.left;
+		}
+		
+		if(temp == null)
+			System.out.println("Data not found...");
+		else {  
+				if(temp.left != null) {         //If left and right of node are not null and it work to delete root node also
+					if(temp.right != null) {
+				       Node tr = temp.right;
+				       	while(tr.left != null)
+				    	   tr = tr.left;
+				       tr.left = temp.left;
+				       
+				       
+				       if(tag.data == temp.data) {    //this check parent and deleting node is same then it is root node
+				    	   root = temp.right;
+				    	   tag.left = tag.right = null;	
+				       }
+				       else if(tag.data < temp.data)   //if data is greater add at the right of node
+				    	   tag.right = temp.right;
+				       else 
+				    	   tag.left = temp.right;      //if data is less add at the left
+				       
+					}
+					else if(temp.right == null) {      //If left of deleting node is not null but right is null
+					    if(tag.data < temp.data)
+					    	tag.right = temp.left;
+					    else 
+					    	tag.left = temp.left;
+					}
+				}
+				if(temp.left == null) {             //If left and right both are null of deleting node
+					if(temp.right == null) {
+						if(tag.data < temp.data)
+							tag.right = null;
+						else 
+							tag.left = null;
+					}
+					else if(temp.right != null) {       //If right of deleting node is not null but left is null
+						if(tag.data < temp.data)
+							tag.right = temp.right;
+						else
+							tag.left = temp.right;
+					}
+				}
+			}
+		}
+	
+	   //Search node
+	 public boolean search(int data) {
+		 Node temp = root;
+			boolean res = false;
+			
+			while(temp != null && temp.data != data) {                     
+				if(data > temp.data)
+					temp = temp.right;
+				else temp = temp.left;
+			}
+			if(temp == null)
+				return res;
+			else return res = true;
+	 }
+	 
+	 //find height
+	 public int findHeight(Node move) {
+		if(move == null)
+			return -1;
+		
+		int leftH = findHeight(move.left);
+		int rightH = findHeight(move.right);
+		
+		return leftH > rightH?leftH+1:rightH+1;
+	 }
+	 
+	 //find lowest
+	 public int largestData() {
+		 Node move = root;
+		 while(move.right != null)
+			 move = move.right;
+		 
+		 return move.data;
+	 }
+	 
+	 //find largest
+	 public int lowestData() {
+		 Node move = root;
+		 while(move.left != null)
+			 move = move.left;
+		 
+		 return move.data;
+	 }
+	 
+	 public void printLevelWise() {
+		 QueueTree q1 = new QueueTree();
+			Node move = root;
+			q1.enQueue(move);
+			
+			while(!q1.isEmpty()) {
+				move = move.left;
+				Node data = q1.deQueue();
+				System.out.print(data.data+" ");
+				
+				if(move.left != null)
+					q1.enQueue(move.left);
+				
+				if(move.right != null)
+					q1.enQueue(move.right);
+			}
+		}
+
+}
+
+

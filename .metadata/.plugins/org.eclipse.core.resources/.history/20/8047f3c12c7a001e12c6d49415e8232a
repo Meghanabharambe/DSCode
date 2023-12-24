@@ -1,0 +1,13 @@
+package binarySearchTree;
+
+public class NodeQueue {
+	int data;
+	NodeQueue next;
+	
+	public NodeQueue(int data) {
+		super();
+		this.data = data;
+		this.next =null;
+	}	
+
+}

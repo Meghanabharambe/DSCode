@@ -1,0 +1,16 @@
+package binarySearchTree;
+
+public class QueueTree {
+	NodeQueue front, rear;
+
+	public QueueTree() {
+		super();
+		this.front = rear = null;
+	}
+	
+	public void printLevelWise() {
+		
+	}
+	
+	
+}

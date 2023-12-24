@@ -1,0 +1,21 @@
+package graphList;
+
+public class LinkedList {
+	Node head;
+
+	public LinkedList() {
+		super();
+		this.head = null;
+	}
+	
+	public void addBeg(int data) {
+		Node n1 = new Node(data);
+		if(head == null) {
+			head = n1;
+		}
+		else {
+			n1.next = head;
+			head = n1;
+		}
+	}
+}

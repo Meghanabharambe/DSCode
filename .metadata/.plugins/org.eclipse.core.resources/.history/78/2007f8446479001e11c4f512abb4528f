@@ -1,0 +1,14 @@
+package binaryTree;
+
+import binarySearchTree.BinaryST;
+
+public class NodeQueue {
+	BinaryST data;
+	NodeQueue next;
+   public NodeQueue(BinaryST data) {
+   this.data=data;
+   next=null;
+   }
+	
+
+}

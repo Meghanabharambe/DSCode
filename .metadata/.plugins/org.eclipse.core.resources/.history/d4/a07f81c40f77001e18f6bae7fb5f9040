@@ -1,0 +1,27 @@
+package dynamic_stack;
+
+public class DStack {
+	NodeS top;
+
+	public DStack() {
+		super();
+		this.top = null;
+	}
+	
+	public void push(int data) {
+		NodeS n1 = new NodeS(data);
+		if(top == null)
+			top = n1;
+		else {
+			n1.next = top;
+			top = n1;
+		}
+	}
+	
+	public int pop() {
+		int data;
+		if(top == null)
+			throw new StackException();
+	}
+	
+}

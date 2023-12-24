@@ -1,0 +1,11 @@
+package postfixOpe;
+
+public class PostfixMain {
+
+	public static void main(String[] args) {
+		PostfixOpe p1 = new PostfixOpe();
+		p1.postfixEva("945*+");
+
+	}
+
+}

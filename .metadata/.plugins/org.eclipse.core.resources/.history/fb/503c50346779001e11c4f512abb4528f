@@ -1,0 +1,8 @@
+package binarySearchTree;
+
+public class QueueTree {
+	Ne rear, front;
+	NodeQueue data;
+	
+	
+}

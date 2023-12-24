@@ -1,0 +1,11 @@
+package linkedListUserDefinedType;
+
+public class BookMain {
+
+	public static void main(String[] args) {
+		BookList b = new BookList();
+		b.createList(3);
+	    System.out.println(b);
+	}
+
+}

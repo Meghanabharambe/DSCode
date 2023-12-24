@@ -1,0 +1,12 @@
+package graphProg;
+
+public class GraphAMain {
+
+	public static void main(String[] args) {
+		GraphAM g = new GraphAM(5);
+		
+		g.acceptGraph();
+		g.display();
+	}
+
+}

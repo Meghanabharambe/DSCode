@@ -1,0 +1,24 @@
+package linkedList;
+
+public class LinkedList {
+	Node head;
+
+	public LinkedList() {
+		super();
+		this.head = null;
+	}
+	
+	public void addNode(int data) {
+		Node n1 = new Node(data);
+		if(head == null)
+			head = n1;
+		else {
+			Node move = head;
+			while(move.next != null) 
+				move = move.next;
+			
+			move.next = n1;
+		}
+	}
+	
+}

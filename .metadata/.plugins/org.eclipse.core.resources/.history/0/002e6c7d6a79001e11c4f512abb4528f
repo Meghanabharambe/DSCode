@@ -1,0 +1,51 @@
+package binarySearchTree;
+
+public class QueueTree {
+	NodeQueue front, rear;
+
+	public QueueTree() {
+		super();
+		this.front = rear = null;
+	}
+	
+	public boolean isEmpty() {
+		return front == null?true:false;
+	}
+	
+	public void enQueue(int data) {
+		NodeQueue n1 = new NodeQueue(data);
+		if(isEmpty())
+			front=rear=n1;
+		else {
+			rear.next = n1;
+			rear = n1;
+		}
+	}
+	
+	public int deQueue() {
+		int data;
+		if(isEmpty())
+			data = -1;
+		else {
+			data = front.data;
+			front = front.next;
+		}
+	   return data;
+	}
+	
+	public void printLevelWise() {
+		Node move = BinaryST.root;
+		enQueue(move.data);
+		
+		while(!isEmpty()) {
+			int data = deQueue();
+			System.out.print(data+" ");
+			
+			if(move.left != null)
+				enQueue(move.left.data);
+			
+			if(move.right != null)
+				enQueue(move.right.data);
+		}
+	}
+}

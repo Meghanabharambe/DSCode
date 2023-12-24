@@ -1,0 +1,21 @@
+package binarySearchTree;
+
+public class NodeQueue {
+	/*BinaryST data;
+	NodeQueue next;
+	
+   public NodeQueue(BinaryST data) {
+	   this.data=data;
+	   next=null;
+   } */
+	
+	int data;
+	NodeQueue next;
+	
+	public NodeQueue(int data) {
+		super();
+		this.data = data;
+		this.next =null;
+	}	
+
+}

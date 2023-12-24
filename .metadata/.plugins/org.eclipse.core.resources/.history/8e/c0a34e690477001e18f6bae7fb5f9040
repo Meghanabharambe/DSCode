@@ -1,0 +1,70 @@
+package doubleEnded_queue;
+
+import java.util.Scanner;
+
+import dynamic_queue.QueEmptyException;
+
+public class DequeMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Deque q1 = new Deque();
+		
+		int ch, data;
+		do {
+			System.out.println("Enter your choice: ");
+			System.out.println("1. enquFront");
+			System.out.println("2. dequFront");
+			System.out.println("3. enquRear");
+			System.out.println("4. enquRear");
+			System.out.println("5. display");
+			System.out.println("0. exit");
+			ch = sc.nextInt();
+			
+			switch(ch) {
+			case 1:
+				System.out.println("Enter data to insert into queue: ");
+				data = sc.nextInt();
+				
+				q1.enQueFront(data);
+				break;
+				
+			case 2:
+				try {
+					data = q1.dequeFront();
+					System.out.println(data);
+				}
+				catch(QueEmptyException e) {
+					System.out.println(e.getMessage());
+				}
+				break;
+				
+			case 3:
+				System.out.println("Enter data to insert into queue: ");
+				data = sc.nextInt();
+				
+				q1.enQueRear(data);
+				break;
+				
+			case 4:
+				try {
+					data = q1.dequeRear();
+					System.out.println(data);
+				}
+				catch(QueEmptyException e) {
+					System.out.println(e.getMessage());
+				}
+				break;
+				
+			case 5:
+			   System.out.println(q1.toString());
+			    break;
+			  
+			}
+			
+			
+		}while(ch!=0);
+
+	}
+
+}

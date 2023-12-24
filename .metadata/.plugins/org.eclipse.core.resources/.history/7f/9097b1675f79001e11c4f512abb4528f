@@ -1,0 +1,134 @@
+package binarySearchTree;
+
+public class BinaryST {
+	Node root;
+
+	public BinaryST() {
+		super();
+		this.root = null;
+	}
+	
+	public void addNode(int data) {
+		Node n1 = new Node(data);
+		
+		if(root == null)
+			root = n1;
+		else {
+			Node move = root;
+			while(true) {
+				
+				if(move.data < n1.data) {
+					if(move.right == null) {
+						move.right = n1;
+						System.out.println("Data added at right of "+move.data+" is "+n1.data);
+						break;
+					}
+					else move = move.right;
+				}
+			
+				if(move.data > n1.data) {
+					if(move.left == null) {
+						move.left = n1;
+						System.out.println("Data added at left of "+move.data+" is "+n1.data);
+						break;
+					}
+					else move = move.left;
+				}
+		  }
+		}
+	}
+	
+	public void display() {		
+		inorder(root);
+		System.out.println("Inorder of tree: ");
+		
+		preorder(root);
+		System.out.println("Preorder of tree: ");
+		
+		postorder(root);
+		System.out.println("Postorder of tree: ");
+	}
+	
+	public void inorder(Node move) {
+		if(move != null) {
+			inorder(move.left);
+			System.out.print(move.data+", ");
+			inorder(move.right);
+		}
+	}
+	
+	public void preorder(Node move) {
+		if(move != null) {
+			System.out.print(move.data+", ");
+			preorder(move.left);
+			preorder(move.right);
+		}
+	}
+	
+	public void postorder(Node move) {
+		if(move != null) {
+			postorder(move.left);
+			postorder(move.right);
+			System.out.print(move.data+", ");
+		}
+	}
+	
+	public void deleteNode(int data) {
+		Node temp = root;
+		Node tag = root;
+		
+		while(temp != null && temp.data != data) {
+			tag = temp;
+			if(data > temp.data)
+				temp = temp.right;
+			else temp = temp.left;
+		}
+		if(temp == null)
+			System.out.println("Data not found...");
+		else {  
+			  System.out.println(tag.data+" ");
+				if(temp.left != null) {         //If left and right of node are not null
+					if(temp.right != null) {
+				       Node tr = temp.right;
+				       	while(tr.left != null)
+				    	   tr = tr.left;
+				       tr.left = temp.right;
+				       
+				       if(tag.data < temp.data)   //If parent data is less than node data add at the right of parent node
+				    	   tag.right = temp.right;
+				       else 
+				    	   tag.left = temp.right;
+					}
+					else if(temp.right == null) {   //If left is not null 
+					    if(tag.data < temp.data)
+					    	tag.right = temp.left;
+					    else 
+					    	tag.left = temp.left;
+					}
+				}
+				if(temp.left == null) {
+					if(temp.right == null) {
+						if(tag.data < temp.data)
+							tag.right = null;
+						else 
+							tag.left = null;
+					}
+					else if(temp.right != null) {
+						if(tag.data < temp.data)
+							tag.right = temp.right;
+						else
+							tag.left = temp.right;
+					}
+				}
+			}
+		}
+}
+
+
+
+
+
+
+
+
+

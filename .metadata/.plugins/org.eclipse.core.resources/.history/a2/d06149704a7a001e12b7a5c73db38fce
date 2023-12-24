@@ -1,0 +1,12 @@
+package graphList;
+
+public class LinkedList {
+	Node head;
+
+	public LinkedList() {
+		super();
+		this.head = null;
+	}
+	
+	
+}

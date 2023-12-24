@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="queueProg.QueueInt"/>
+    <fullyQualifiedTypeName name="queueProg.Customer"/>
+    <fullyQualifiedTypeName name="simpleLinkedList.NodeStr"/>
+    <fullyQualifiedTypeName name="simpleLinkedList.LinkedListStr"/>
+    <fullyQualifiedTypeName name="linkedListOpera.sortSplitMerge"/>
+    <fullyQualifiedTypeName name="linkedListOpera.LinkedList"/>
+    <fullyQualifiedTypeName name="simpleLinkedList.LinkedList"/>
+    <fullyQualifiedTypeName name="linkedListUserDefinedType.LinkedListEmp"/>
+    <fullyQualifiedTypeName name="doublyLinkedList.DoublyLL"/>
+    <fullyQualifiedTypeName name="dynamic_queue.QueEmptyException"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="priorityQue.PriorityQue"/>
+    <fullyQualifiedTypeName name="priorityQue.Element"/>
+    <fullyQualifiedTypeName name="priorityQue.QueException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="dynamic_stack.StackException"/>
+    <fullyQualifiedTypeName name="dynamic_stack.DStack"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="linkedListUserDefinedType.BookList"/>
+    <fullyQualifiedTypeName name="sorting.QuickSort"/>
+    <fullyQualifiedTypeName name="binaryTree.BinaryTree"/>
+    <fullyQualifiedTypeName name="binarySearchTree.BinaryST"/>
+    <fullyQualifiedTypeName name="binaryTree.NodeQueue"/>
+    <fullyQualifiedTypeName name="binarySearchTree.QueueTree"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="graphProg.DireGraphAM"/>
+    <fullyQualifiedTypeName name="graphProg.GraphDFS"/>
+    <fullyQualifiedTypeName name="linkedList.LinkedList"/>
+    <fullyQualifiedTypeName name="EvenOddTrimList.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="postfixOpe.PostfixOpe"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,117 @@
+package linkedListOpera;
+
+import java.util.Scanner;
+
+public class sortSplitMerge {
+      Node head;
+
+	public sortSplitMerge() {
+		super();
+		this.head = null;
+	}
+    
+	//Creating linkedList...
+		public void createLinkedList(int size) {
+			Scanner sc = new Scanner(System.in);
+			int data;
+			while(size != 0) {
+				System.out.println("Enter data to insert into linked list: ");
+				data = sc.nextInt();
+				size--;
+				
+				addNode(data);
+			}
+		}
+		
+		//add node in linkedList...
+		public void addNode(int val) {
+			Node newNode = new Node(val);
+			if(head == null)
+				head = newNode;
+			else {
+				Node move = head;
+				while(move.next != null)
+					move = move.next;
+				move.next = newNode;
+			} 
+		}	
+
+		//display linkedlist..
+			public void display() {
+				Node move;
+				for(move = head; move.next != null; move = move.next) {
+					System.out.print(move.data+" ");
+				}
+				if(move.next == null) {
+					System.out.println(move.data);
+				}
+			}
+			
+			
+		//sort Linkedlist
+		public void sort() {
+			if(head == null)
+				System.out.println("Linked list is null...");
+			else {
+				Node move, swap;
+				for(move = head; move != null; move = move.next) {
+					for(swap = move.next; swap != null; swap = swap.next) {
+						if(move.data>swap.data) {
+							int data = move.data;
+							move.data = swap.data;
+							swap.data = data;
+						}
+					}
+					
+				}
+			}
+			
+			/* we can do soting using while loop
+			 * while(move != null) {
+					swap = move.next;
+					while(swap != null) {	
+						if(move.data>swap.data) {
+							int data = move.data;
+							move.data = swap.data;
+							swap.data = data;
+						}
+						swap = swap.next;
+					}
+					 move = move.next;
+				}
+			 */
+		}
+		
+		//split linkedlist in even and odd
+		public void split() {
+			sortSplitMerge even = new sortSplitMerge();
+			sortSplitMerge odd = new sortSplitMerge();
+			
+			Node move = head;
+			while(move != null) {
+				if(move.data %2 == 0)
+					even.addNode(move.data);
+				else
+					odd.addNode(move.data);
+				move = move.next;
+			}
+			even.display();
+			odd.display();
+	  }
+		
+	 
+	  //Merge two linkedlist in single
+		public void merge(sortSplitMerge l2) {
+			Node move;
+			for(move = head; move.next != null; move = move.next);
+			  move.next = l2.head;		  
+		}
+			
+}
+
+
+
+
+
+
+

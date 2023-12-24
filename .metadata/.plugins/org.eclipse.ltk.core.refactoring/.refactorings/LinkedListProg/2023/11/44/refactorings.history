@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;EvenOddTrimList.LinedList&apos; to &apos;LinkedList&apos;&#x0D;&#x0A;- Original project: &apos;LinkedListProg&apos;&#x0D;&#x0A;- Original element: &apos;EvenOddTrimList.LinedList&apos;&#x0D;&#x0A;- Renamed element: &apos;EvenOddTrimList.LinkedList&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LinedList&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;EvenOddTrimList{LinedList.java[LinedList" matchStrategy="1" name="LinkedList" qualified="false" references="true" similarDeclarations="false" stamp="1699080354333" textual="false" version="1.0"/>
+</session>

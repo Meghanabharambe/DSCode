@@ -1,0 +1,20 @@
+package priorityQue;
+
+public class PriorityQue {
+	int size, front, rear;
+	Element []arr;
+	
+	public PriorityQue() {
+		super();
+		this.size = 3;
+		this.front = rear = -1;
+		arr = new Element[size];
+	}	
+	
+	public PriorityQue(int size) {
+		super();
+		this.size = size;
+		this.front = rear = -1;
+		arr = new Element[size];
+	}	
+}

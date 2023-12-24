@@ -1,0 +1,15 @@
+package postfixOpe;
+
+public class PostfixOpe {
+	int size;
+	int top;
+	int arr[];
+	
+	public PostfixOpe(int size) {
+		super();
+		this.size = size;
+		this.top = -1;
+		this.arr = new int[size];
+	}
+	
+}

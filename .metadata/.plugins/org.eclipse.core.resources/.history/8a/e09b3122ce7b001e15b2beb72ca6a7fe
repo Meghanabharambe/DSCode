@@ -1,0 +1,84 @@
+package postfixOpe;
+
+public class PostfixOpe {
+	int size;
+	int top;
+	int arr[];
+	
+	public PostfixOpe(int size) {
+		super();
+		this.size = size;
+		this.top = -1;
+		this.arr = new int[size];
+	}
+	
+	public boolean isFull() {
+		return top == size-1?true:false;
+	}
+	
+	public boolean isEmpty() {
+		return top == -1?true:false;
+	}
+	
+	public void push(int data) {
+		if(!isFull()) {
+			top++;
+			arr[top] = data;
+		}
+		else
+			System.out.println("Stack is full...");
+	}
+	
+	public int pop() {
+		int data = -1;
+		if(!isEmpty()) {
+			data = arr[top];
+			top--;
+		}
+		return data;
+	}
+	
+	public boolean isOperator(char ch) {
+		if(ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '%')
+			return true;
+		else return false;
+	}
+	
+	public int postfixEva(String str){
+		PostfixOpe s1 = new PostfixOpe(str.length());
+		int res = -1;
+		char ch;
+		for(int i = 0; i<str.length(); i++) {
+			ch = str.charAt(i);
+			if(ch >= '0' && ch <= '9') {      //ch >= 48 && ch <= 57
+				s1.push((int)ch);
+			}
+			else if(isOperator(ch)) {
+				int no2 = s1.pop();
+				int no1 =  s1.pop();
+				
+				switch(ch) {
+					case '+':  res = no1 + no2;
+						break;
+						
+					case '-': res = no1 - no2;
+						break;
+						
+					case '*': res = no1 * no2;
+						break;
+						
+					case '/': res = no1 / no2;
+						break;
+					
+					case '%': res = no1 % no2;
+						break;
+				}
+				
+				s1.push(res);
+			}
+			else return res;
+		}
+		res = s1.pop();
+		return res;
+	}
+}

@@ -1,0 +1,32 @@
+package doubleEnded_queue;
+
+public class Deque {
+		NodeQ front, rear;
+	
+	public Deque() {
+		front = rear = null;
+	}
+	
+	public boolean isEmpty() {
+		return front == null?true:false;
+	}
+	
+	public void enQueFront(int data) {
+		NodeQ n1 = new NodeQ(data);
+		if(isEmpty())
+			front = rear = n1;
+		else {
+			n1.next = front;
+			front = n1;
+		}
+	}
+	public void enQueRear(int data) {
+		NodeQ n1 = new NodeQ(data);
+		if(isEmpty())
+			front = rear = n1;
+		else {
+			rear.next = n1;
+			rear = n1;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+package dynamic_stack;
+
+import java.util.Scanner;
+
+public class DstackMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		DStack d1 = new DStack();
+		
+		int ch, data;
+		do {
+			System.out.println("Enter your choice: ");
+			System.out.println("1. enqueue");
+			System.out.println("2. dequeue");
+			System.out.println("3. display");
+			System.out.println("0. exit");
+			ch = sc.nextInt();
+			
+			switch(ch) {
+			case 1:
+				System.out.println("Enter data to insert into stack: ");
+				data = sc.nextInt();
+				
+				d1.push(data);
+				break;
+				
+			case 2:
+				try {
+					data = d1.pop();
+					System.out.println(data);
+				}
+				catch(StackException e) {
+					System.out.println(e.getMessage());
+				}
+				break;
+				
+			case 3:
+			   System.out.println(d1.toString());
+			    break;
+			  
+			}
+			
+			
+		}while(ch!=0);
+
+
+	}
+
+}

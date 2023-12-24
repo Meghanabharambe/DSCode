@@ -1,0 +1,10 @@
+package graphList;
+
+public class GraphListMain {
+
+	public static void main(String[] args) {
+		Graph g1 = new Graph(5);
+
+	}
+
+}

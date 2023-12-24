@@ -1,0 +1,16 @@
+package linkedListUserDefinedType;
+
+import java.util.Scanner;
+
+public class BookList {
+	NodeBook head;
+
+	public BookList() {
+		super();
+		this.head = null;
+	}
+	
+	public void createList(int size) {
+		Scanner sc = new 
+	}
+}

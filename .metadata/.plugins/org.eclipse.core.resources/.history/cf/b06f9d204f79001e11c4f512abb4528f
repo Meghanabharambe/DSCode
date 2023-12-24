@@ -1,0 +1,84 @@
+package binarySearchTree;
+
+public class BinaryST {
+	Node root;
+
+	public BinaryST() {
+		super();
+		this.root = null;
+	}
+	
+	public void addNode(int data) {
+		Node n1 = new Node(data);
+		
+		if(root == null)
+			root = n1;
+		else {
+			Node move = root;
+			while(true) {
+				
+				if(move.data < n1.data) {
+					if(move.right == null) {
+						move.right = n1;
+						System.out.println("Data added at "+move.data+" is "+n1.data);
+						break;
+					}
+					else move = move.right;
+				}
+			
+				if(move.data > n1.data) {
+					if(move.left == null) {
+						move.left = n1;
+						System.out.println("Data added at "+move.data+" is "+n1.data);
+						break;
+					}
+					else move = move.left;
+				}
+		  }
+		}
+	}
+	
+	public void display() {		
+		inorder(root);
+		System.out.println("Inorder of tree: ");
+		
+		preorder(root);
+		System.out.println("Preorder of tree: ");
+		
+		postorder(root);
+		System.out.println("Postorder of tree: ");
+	}
+	
+	public void inorder(Node move) {
+		if(move!= null) {
+			inorder(move.left);
+			System.out.print(move.data+", ");
+			inorder(move.right);
+		}
+	}
+	
+	public void preorder(Node move) {
+		if(move != null) {
+			System.out.print(move.data+", ");
+			preorder(move.left);
+			preorder(move.right);
+		}
+	}
+	
+	public void postorder(Node move) {
+		if(move != null) {
+			postorder(move.left);
+			postorder(move.right);
+			System.out.print(move.data+", ");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
